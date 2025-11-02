@@ -1,0 +1,26 @@
+# Ultimate Recipe System Module Configuration
+code: recipe-system
+name: "Ultimate Recipe System"
+default_selected: false
+
+prompt:
+	- "Thank you for choosing Ultimate Recipe System!"
+	- "Track, organize, and improve your recipes with advanced testing and cookbook features."
+
+# Core config values are automatically inherited:
+# user_name
+# communication_language
+# document_output_language
+# output_folder
+
+# ==========================================================================
+# CONFIGURATION FIELDS
+# ==========================================================================
+output_path:
+	prompt: "Where should recipe-system save recipe files?"
+	default: "data/recipes"
+	result: "{project-root}/bmad/recipe-system/data/recipes"
+module_version:
+	result: "1.0.0"
+data_path:
+	result: "{project-root}/bmad/recipe-system/data"

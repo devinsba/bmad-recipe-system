@@ -1,0 +1,10 @@
+code: test-recipe
+name: "Test Recipe"
+description: "Assists the user in testing a recipe, collecting feedback, and suggesting tweaks for improvement."
+steps:
+  - prompt: "Select a recipe to test:"
+  - prompt: "Record your observations and feedback:"
+  - prompt: "List any changes or tweaks you made:"
+  - prompt: "Tag with new filters if applicable:"
+  - action: "Update the recipe file with test results and tweaks in {project-root}/bmad/recipe-system/data/recipes/"
+  - action: "Confirm update and commit changes to git."

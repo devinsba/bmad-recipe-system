@@ -1,0 +1,11 @@
+code: add-recipe
+name: "Add Recipe"
+description: "Guides the user through adding a new recipe, capturing all relevant details and storing it in the system."
+steps:
+  - prompt: "Enter the recipe name:"
+  - prompt: "Enter the source (book, website, etc.):"
+  - prompt: "List ingredients (one per line):"
+  - prompt: "Describe the preparation steps:"
+  - prompt: "Tag with filters (cooking method, tool, dietary concerns):"
+  - action: "Save recipe details to a text file in {project-root}/bmad/recipe-system/data/recipes/"
+  - action: "Confirm recipe entry and commit changes to git."
