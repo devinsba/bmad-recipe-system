@@ -1,10 +1,13 @@
 code: test-recipe
 name: "Test Recipe"
-description: "Assists the user in testing a recipe, collecting feedback, and suggesting tweaks for improvement."
+description: "Assists the user in testing a recipe, collecting detailed feedback, tracking changes, and updating version history. Archives all test results and feedback for future reference."
 steps:
   - prompt: "Select a recipe to test:"
-  - prompt: "Record your observations and feedback:"
-  - prompt: "List any changes or tweaks you made:"
-  - prompt: "Tag with new filters if applicable:"
-  - action: "Update the recipe file with test results and tweaks in {project-root}/bmad/recipe-system/data/recipes/"
+  - prompt: "Record your observations and feedback (taste, texture, appearance, etc.):"
+  - prompt: "List any changes or tweaks you made during testing:"
+  - prompt: "Tag with new filters or provenance if applicable:"
+  - prompt: "Provide notes on test conditions (date, equipment, participants, etc.):"
+  - action: "Update the recipe file with test results, tweaks, and feedback in {project-root}/bmad/recipe-system/data/recipes/"
+  - action: "Record new version and timestamp in version history."
+  - action: "Archive all test data and feedback for future reference."
   - action: "Confirm update and commit changes to git."

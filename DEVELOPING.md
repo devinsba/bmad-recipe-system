@@ -7,6 +7,10 @@
      ```bash
      npx bmad-method@alpha install recipe-system
      ```
+   - Or, install directly from GitHub:
+     ```bash
+     npx bmad-method@alpha install github:devinsba/bmad-recipe-system/bmad/recipe-system
+     ```
 
 2. **Compile agents:**
    - After installation, select 'Compile Agents' in the BMAD interface or run:
@@ -14,10 +18,10 @@
      bmad compile-agents recipe-system
      ```
 
-3. **Load the Sous Chef agent:**
+3. **Load the Curator agent:**
    - In your BMAD environment, load the agent:
      ```
-     agent sous-chef
+     agent curator
      ```
 
 4. **Run workflows:**
