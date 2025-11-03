@@ -1,6 +1,6 @@
-code: test-recipe
-name: "Test Recipe"
-description: "Assists the user in testing a recipe, collecting detailed feedback, tracking changes, and updating version history. Archives all test results and feedback for future reference."
+code: record-recipe-test
+name: "Record Recipe Test"
+description: "Guides the user in recording a recipe test, collecting detailed feedback, tracking changes, and updating version history. Archives all test results and feedback for future reference."
 steps:
   - prompt: "Select a recipe to test:"
   - prompt: "Record your observations and feedback (taste, texture, appearance, etc.):"

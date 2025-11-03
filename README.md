@@ -13,34 +13,39 @@ This module provides:
 ## Installation
 
 ```bash
-bmad install recipe-system
+# curl
+curl https://raw.githubusercontent.com/devinsba/bmad-recipe-system/refs/heads/main/bmad/recipe-system/scripts/install.sh | bash
+
+# wget
+wget -qO- https://raw.githubusercontent.com/devinsba/bmad-recipe-system/refs/heads/main/bmad/recipe-system/scripts/install.sh | bash
 ```
 
 ## Components
 
 ### Agents (1)
 
-- **Sous Chef**: Handles all recipe management, testing, and improvement tasks
-  - Commands: `add-recipe`, `test-recipe`
+- **Curator**: Museum/library-style agent that catalogs, tracks, and archives every detail about recipes and their tests. Tracks changes and version history, gathers provenance, and organizes all recipe data.
+   - Commands: `add-recipe`, `record-recipe-test`
 
 ### Workflows (2)
 
-- **add-recipe**: Add new recipes
-- **test-recipe**: Test and improve recipes
+- **add-recipe**: Add new recipes with full metadata, provenance, and archival details
+- **record-recipe-test**: Record recipe tests, collect feedback, track changes, and update version history
 
 ## Quick Start
 
 1. **Load the main agent:**
    ```
-   agent sous-chef
+   agent curator
    ```
 2. **View available commands:**
    ```
    *help
    ```
-3. **Run the main workflow:**
+3. **Run the main workflows:**
    ```
    workflow add-recipe
+   workflow record-recipe-test
    ```
 
 ## Module Structure
@@ -48,10 +53,10 @@ bmad install recipe-system
 ```
 recipe-system/
 ├── agents/
-│   └── sous-chef.agent.yaml
+│   └── curator.agent.yaml
 ├── workflows/
 │   ├── add-recipe.workflow.yaml
-│   └── test-recipe.workflow.yaml
+│   └── record-recipe-test.workflow.yaml
 ├── tasks/
 ├── templates/
 ├── data/
@@ -74,9 +79,9 @@ Key settings:
 As an advanced home cook, you can add recipes from books or online, tag them, and later test and tweak them to make them your own—all versioned in git!
 
 ## Development Roadmap
-- [x] Sous Chef agent
-- [x] add-recipe workflow
-- [x] test-recipe workflow
+- [x] Curator agent
+- [x] add-recipe workflow (enhanced)
+- [x] record-recipe-test workflow (enhanced)
 - [ ] Cookbook compilation workflow
 - [ ] Advanced filtering and search
 - [ ] Expanded agent lineup
